@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Evalu8</string>
+    <string name="sauthentifier">S\'authentifier</string>
+    <string name="sinscrire_ici">S\'inscrire ici</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="num_ro_de_t_l_phone">Numéro de téléphone</string>
+    <string name="confirmer_mot_de_passe">Confirmer mot de passe</string>
+    <string name="email">Email</string>
+    <string name="nom_et_pr_nom">Nom et prénom</string>
+    <string name="s_inscrire">S\'inscrire</string>
+    <string name="se_connecter">Se connecter</string>
+    <string name="r_clamer">Réclamer</string>
+    <string name="autres">Autres</string>
+    <string-array name="_sessions">
+        <item>Ouverture</item>
+        <item>Premier Discours</item>
+        <item>Pause Cafe</item>
+        <item>Deuxieme Discours</item>
+        <item>Troisieme Discours</item>
+        <item>Diner</item>
+        <item>Hackathon</item>
+        <item>Petit Dejeuner</item>
+        <item>Ceremonie de Cloture</item>
+    </string-array>
+    <string-array name="_types">
+        <item>un organisateur</item>
+        <item>un formateur</item>
+        <item>un équipement</item>
+        <item>une salle</item>
+        <item>une session</item>
+        <item>un repas</item>
+    </string-array>
+    <string-array name="_type5">
+        <item>Manque</item>
+        <item>Mauvais etat</item>
+        <item>Autres</item>
+    </string-array>
+    <string-array name="_type4">
+        <item>Retard</item>
+        <item>Rate</item>
+        <item>Erreur</item>
+        <item>Autres</item>
+    </string-array>
+    <string-array name="_type3">
+        <item>Sale</item>
+        <item>Surcharge</item>
+        <item>Autres</item>
+    </string-array>
+    <string-array name="_type2">
+        <item>Mauvais etat</item>
+        <item>Surcharge</item>
+        <item>Autres</item>
+    </string-array>
+    <string-array name="_type0">
+        <item>Comportement</item>
+        <item>Injoignable</item>
+        <item>Autres</item>
+    </string-array>
+    <string-array name="_type1">
+        <item>Comportement</item>
+        <item>Presentation</item>
+        <item>Autres</item>
+    </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+</resources>
