@@ -1,0 +1,96 @@
+<html lang="en-us">
+	<head> 
+	<title> Poll </title>
+	<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	
+	
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+		<script src="app.js"></script>
+		
+		
+		
+		<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+
+<style>
+    .limited {
+    background-color: #fdda7c;
+}
+
+.serious {
+    background-color: #fab567;
+}
+
+.catastrophic {
+    background-color: #f2635d;
+}
+</style>
+
+
+</head>
+<body style="background-image:url('google.jpg')">
+    <div class="container" ng-app="angularjs-starter" ng-controller="MainCtrl">
+            <img src="logo.png" width="200"></img>
+            <h1 class="text-center">Ajoute d'une évaluation</h1>
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <table class="table table-bordered table-hover" id="tab_logic">
+                    <thead>
+                        <tr >
+                            <th class="text-center">
+                                #
+                            </th>
+                            <th class="text-center">
+                                Nom d'évaluation
+                            </th>
+                            <th class="text-center">
+                                
+                                </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0'>
+                            <td>
+                            1
+                            </td>
+                            <td>
+                            <input type="text" name='name0'  placeholder='Evaluation' class="form-control"/>
+                            </td>
+                            <td class="text-center">
+                                    <input type="button" ng-model="ev" onclick="submit()" value="Submit" class="form-control"/>
+                            </td>
+                            
+                        </tr>
+                        <tr id='addr1'></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <a id="add_row" class="btn btn-default pull-left">Add Row</a><a id='delete_row' class="pull-right btn btn-default">Delete Row</a>
+    </div>
+
+    <script>
+    $(document).ready(function(){
+      var i=1;
+     $("#add_row").click(function(){
+      $('#addr'+i).html("<td>"+ (i+1) +"</td><td><input name='name"+i+"' type='text' placeholder='Evaluation' class='form-control input-md'  /> </td><td><input type='button' ng-model='ev' onclick='submit()' value='Submit' class='form-control'/></td>");
+
+      $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+      i++; 
+  });
+     $("#delete_row").click(function(){
+    	 if(i>1){
+		 $("#addr"+(i-1)).html('');
+		 i--;
+		 }
+	 });
+
+});
+
+</script>

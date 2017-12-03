@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head> 
+	<title> Poll </title>
+	<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	
+	
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+		<script src="app.js"></script>
+		
+		
+		
+		<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+							$(document).ready(function () {
+
+				$('.star').on('click', function () {
+				$(this).toggleClass('star-checked');
+				});
+
+				$('.ckbox label').on('click', function () {
+				$(this).parents('tr').toggleClass('selected');
+				});
+
+				$('.btn-filter').on('click', function () {
+				var $target = $(this).data('target');
+				if ($target != 'all') {
+					$('.table tr').css('display', 'none');
+					$('.table tr[data-status="' + $target + '"]').fadeIn('slow');
+				} else {
+					$('.table tr').css('display', 'none').fadeIn('slow');
+				}
+				});
+
+			});
+		</script>
+	</head>
+	<body style="background-image:url('google.jpg')" >
+			<div class="container" ng-app ="angularjs-starter" ng-controller="MainCtrl">
+					<div class="row">
+				
+						<section class="content">
+							<img src="logo.png" width="200"></img>
+							<h1 class="text-center">Liste des réclamations</h1>
+							<div class="col-md-8 col-md-offset-2">
+								<div class="panel panel-default">
+									<div class="panel-body">
+									
+										<div class="table-container">
+											<table class="table table-filter">
+												<tbody>
+													<tr data-status="pagado" ng-repeat="obj in reclamation">
+														<td>
+															
+														</td>
+														<td>
+															<a href="javascript:;" class="star">
+																<i class="glyphicon glyphicon-star"></i>
+															</a>
+														</td>
+														<td>
+															<div class="media">
+																<a href="#" class="pull-left">
+																	<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+																</a>
+																<div class="media-body">
+																	
+																	<h4 class="title">
+																		{{obj.type}}
+																		<span class="pull-right pagado">({{obj.objet}})</span>
+																	</h4>
+																	<p class="summary">{{obj.session}}</p>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</section>
+						
+					</div>
+				</div>
+	</body>
+
+</html>
